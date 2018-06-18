@@ -1,0 +1,231 @@
+
+body {
+  margin: 0;
+  overflow: hidden;
+  color: rgba(255,255,255,1);
+  font-family: 'Oswald', sans-serif;
+}
+.model-cont {
+  background: url("../texture/11.jpeg");
+  background-size: cover;
+  div {
+    margin-top: 1vh;
+    left: 94.5% !important;
+  }
+}
+.update-container {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  .color-container {
+    position: absolute;
+    height: 100vh;
+    width: 260px;
+    top: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    .elem-cont {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 400px;
+      .blocs {
+        display: flex;
+        flex-wrap: wrap;
+        .blocs-color {
+          height: 5px;
+          width: 2px;
+          border: 1px solid transparent;
+          cursor: pointer;
+          &.active {
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+  .translate {
+    top: 80vh;
+  }
+  .cont-moove {
+    transform: scale(0.7);
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    right: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .arrow-right {
+      z-index: 99;
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 20px solid rgba(255, 255, 255, 1);
+      &:hover {
+        border-left-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .arrow-left {
+      z-index: 99;
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 20px solid rgba(255, 255, 255, 1);
+      &:hover {
+        border-right-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .arrow-top {
+      position: absolute;
+      left: 60px;
+      top: 0px;
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      transform: rotate(-90deg);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 20px solid rgb(255, 255, 255);
+      &:hover {
+        border-left-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .arrow-bottom {
+      position: absolute;
+      left: 60px;
+      bottom: 0px;
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      transform: rotate(-90deg);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 20px solid rgba(255, 255, 255, 1);
+      &:hover {
+        border-right-color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+  .rotate {
+    top: 60vh;
+    background: url("../texture/3drotation.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    .rot {
+      opacity: 0;
+    }
+    .arrow-right {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 30px solid rgba(255, 255, 255, 1);
+    }
+    .arrow-left {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 30px solid rgba(255, 255, 255, 1);
+    }
+    .arrow-top {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 30px solid rgb(255, 255, 255);
+    }
+    .arrow-bottom {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-right: 30px solid rgba(255, 255, 255, 1);
+    }
+  }
+
+  .zoom {
+    transform: scale(0.7);
+    position: absolute;
+    height: 45px;
+    right: 4%;
+    top: 93vh;
+    left: 200px;
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    .circle-more, .circle-less {
+      cursor: pointer;
+      height: 35px;
+      width: 35px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      &:hover {
+        color: rgba(255,255,255,0.7);
+      }
+    }
+  }
+
+  .anim-content {
+    position: absolute;
+    top: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    p {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+    }
+    .blocs-anim {
+      margin-left: 20px;
+      height: 39px;
+      width: 39px;
+      border-radius: 8px;
+      cursor: pointer;
+      img {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .face-zoom {
+    position: absolute;
+    display: flex;
+    top: 90vh;
+    width: auto;
+    left: 195px;
+    .zoom-target {
+      cursor: pointer;
+      margin-left: 10px;
+      height: 25px;
+      width: 25px;
+      border-radius: 8px;
+      img {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .clothes-content {
+    position: absolute;
+    display: flex;
+    width: auto;
+    top: 1%;
+    right: 90px;
+    .blocs-clothes {
+      cursor: pointer;
+      margin-left: 10px;
+      height: 35px;
+      width: 35px;
+      border-radius: 8px;
+      img {
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
